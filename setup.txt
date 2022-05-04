@@ -1,0 +1,31 @@
+https://www.hotrails.dev/turbo-rails/turbo-rails-tutorial-introduction
+
+$ rbenv install 3.0.0
+$ rbenv local 3.0.0
+$ ruby -v
+$ gem install rails -v 7.0.0
+
+### Create our application:
+$ bundle exec rails new . --css=sass --javascript=esbuild --database=postgresql --force
+
+### Command to install the dependencies and create the database
+$ bin/setup
+
+== Installing dependencies ==
+The Gemfile's dependencies are satisfied
+== Preparing database ==
+Created database 'quote_editor_development'
+Created database 'quote_editor_test'
+== Removing old logs and tempfiles ==
+== Restarting application server ==
+
+### Add to package.json
+"scripts": {
+  "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
+  "build:css": "sass ./app/assets/stylesheets/application.sass.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+}
+
+$ bin/rails css:install:sass - reinstall package
+
+### Start rails server
+$ bin/dev
