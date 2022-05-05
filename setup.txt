@@ -29,3 +29,6 @@ $ bin/rails css:install:sass - reinstall package
 
 ### Start rails server
 $ bin/dev
+
+### Db seed -command to remove all the quotes and loading fixtures as development data
+$ bin/rails db:seed
