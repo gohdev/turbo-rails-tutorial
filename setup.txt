@@ -32,3 +32,6 @@ $ bin/dev
 
 ### Db seed -command to remove all the quotes and loading fixtures as development data
 $ bin/rails db:seed
+
+### Run the test
+$ bin/rails test:system
